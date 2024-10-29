@@ -13,8 +13,14 @@ public class LocationUtils {
 
         World world = chunk.getWorld();
 
-        int x = chunk.getX() << 4 + CorePlugin.INSTANCE.getRandom().nextInt(16);
-        int z = chunk.getZ() << 4 + CorePlugin.INSTANCE.getRandom().nextInt(16);
+        System.out.println("chunk: " + chunk.getX());
+        System.out.println("chunk: " + chunk.getZ());
+
+        int x = (chunk.getX() << 4) + CorePlugin.INSTANCE.getRandom().nextInt(16);
+        int z = (chunk.getZ() << 4) + CorePlugin.INSTANCE.getRandom().nextInt(16);
+
+        System.out.println("coord: " + x);
+        System.out.println("coord: " + z);
 
         int y = world.getHighestBlockYAt(x, z);
 
