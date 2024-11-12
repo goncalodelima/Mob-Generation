@@ -18,9 +18,8 @@ public class ChunkListener implements Listener {
 
                 entity.remove();
 
-                if (!MonsterRunnable.ANIMALS.remove(entity.getUniqueId())) {
-                    MonsterRunnable.WAVE_ANIMALS.remove(entity.getUniqueId());
-                }
+                MonsterRunnable.ANIMALS.remove(entity.getUniqueId());
+                MonsterRunnable.WAVE_ANIMALS.remove(entity.getUniqueId());
 
             }
 
